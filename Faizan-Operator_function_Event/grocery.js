@@ -1,20 +1,16 @@
 function calculate(){
-    const Grocery=20;
+    const grocery=20;
     const Icecram=15;
+    const both_item=grocery+Icecram;
     var leftamount=0;
-    cost=document.getElementById("amount").value;
-    if(cost>=(Grocery+Icecram)){
-         leftamount=leftamount+(cost-(Grocery+Icecram))
+    var ashish_amount=document.getElementById("amount").value;
+   if(ashish_amount>=(both_item)){
+         leftamount=leftamount+(ashish_amount-(both_item))
         alert("Ashish purchase Grocery as well as Icecream and left amount is="+leftamount);
-    }else if(cost<(Grocery+Icecram) && cost>=Grocery){
-        leftamount=leftamount+(cost-Grocery);
-        alert("Ashish purchase only Grocery because only "+leftamount+" Rs is left");
-    }else if(cost<=(Grocery+Icecram) && cost>=Icecram){
-        // var leftamount=0;
-        // leftamount=leftamount+(cost-Icecram);
-        alert("Ashish can purchase icecream but grocery is necessary your amount is "+cost+"");
-      }else if(cost<=(Grocery+Icecram) && cost<=Grocery && cost<=Icecram ){
-        alert("Ashish does not purchase anything  because less amount");
+    }else if(ashish_amount>=grocery){
+        leftamount=leftamount+(ashish_amount-grocery);
+        alert("Ashish can purchase Grocery only and "+leftamount+" Rs is left");
+    }else {
+        alert("Ashish does not purchase anything because of the  less amount");
     }
-    
 }
